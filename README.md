@@ -1,12 +1,9 @@
-# React + Vite
+# 💍 Wedding Website for Carmen & Oliver
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a personalized wedding website built with **ReactJS** to celebrate the wedding of **Carmen** and **Oliver**. It includes essential event information, RSVP functionality, travel and accommodation details, and a photo gallery to share the love.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Plans for the website
+ - event information
+ - RSVP functionality
+ - photo gallery
+ 
