@@ -13,3 +13,19 @@
   padding: 2rem 2rem;
   gap: 1rem;
 }
+
+.navbar-date-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  background-color: #302D31;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2rem;
+  gap: 1rem;  
+}
