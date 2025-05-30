@@ -35,7 +35,7 @@
   text-decoration: none;
 }
 
-.navbar li .active {
+.navbar li.active {
   background-color: #555;
 }
 
@@ -43,6 +43,10 @@
   background-color: #777;
 }
 
+.container {
+  margin: 1rem;
+  text-align: center;
+}
 
 .footer {
   background-color: #302D31;

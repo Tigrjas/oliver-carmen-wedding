@@ -4,6 +4,7 @@ export default function Navbar() {
   const WEDDING_DATE = new Date('2026-5-10');
   const currentDate = new Date();
   const daysUntilWedding = daysBetween(WEDDING_DATE, currentDate);
+  
 
   return (
     <nav className="navbar">
@@ -14,21 +15,11 @@ export default function Navbar() {
         </div>
         <div className="navbar-links">
           <ul>
-            <li>
-              <a href="/home" className='active'>Home</a>
-            </li>
-            <li>
-              <a href="/story">Our Story</a>
-            </li>
-            <li>
-              <a href="/photos">Photos</a>
-            </li>
-            <li>
-              <a href="/event">Event Info</a>
-            </li>
-            <li>
-              <a href="/rsvp">RSVP</a>
-            </li>
+            <CustomLink href="/">Home</CustomLink>
+            <CustomLink href="/story">Story</CustomLink>
+            <CustomLink href="/photos">Photos</CustomLink>
+            <CustomLink href="/event">Event Info</CustomLink>
+            <CustomLink href="/rsvp">RSVP</CustomLink>
           </ul>
         </div>
     </nav>
@@ -39,4 +30,15 @@ function daysBetween(date1, date2) {
   const timeDiff = date2.getTime() - date1.getTime();
   const daysDiff = Math.round(timeDiff / (1000 * 60 * 60 * 24));
   return Math.abs(daysDiff);
+}
+
+function CustomLink({ href, children, ...props }) {
+  const path = window.location.pathname;
+  console.log(path)
+  return (
+    <li className={path === href ? "active": ""}>
+      <a href={href} {...props}>{children}</a>
+    </li>
+  )
+
 }
