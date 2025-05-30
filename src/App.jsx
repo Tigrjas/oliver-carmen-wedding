@@ -5,33 +5,20 @@ import Story from './pages/Story'
 import EventInfo from './pages/EventInfo'
 import Photos from './pages/Photos'
 import RSVP from './pages/RSVP'
+import { Route, Routes } from 'react-router'
 
 function App() {
-  let Component
-  switch(window.location.pathname) {
-    case "/":
-      Component = Home
-      break
-    case "/story":
-      Component = Story
-      break
-    case "/photos":
-      Component = Photos
-      break
-    case "/event":
-      Component = EventInfo
-      break
-    case "/rsvp":
-      Component = RSVP
-      break
-  }
-
-
   return (
     <>
       <Navbar />
       <div className="container">
-        <Component />
+        <Routes>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/story' element={<Story />}></Route>
+          <Route path='/photos' element={<Photos />}></Route>
+          <Route path='/event' element={<EventInfo />}></Route>
+          <Route path='/rsvp' element={<RSVP />}></Route>
+        </Routes>
       </div>
     </>
   )
