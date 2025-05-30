@@ -35,12 +35,13 @@ function daysBetween(date1, date2) {
 
 function CustomLink({ to, children, ...props }) {
   const resolvedPath = useResolvedPath(to);
-  const isActive = useMatch({ path: resolvedPath.pathname, end: true })
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
 
   return (
-    <li className={isActive ? "active": ""}>
-      <Link to={to} {...props}>{children}</Link>
+    <li>
+      <Link to={to} className={isActive ? "active" : ""} {...props}>
+        {children}
+      </Link>
     </li>
-  )
-
+  );
 }
