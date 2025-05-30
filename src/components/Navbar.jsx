@@ -12,6 +12,25 @@ export default function Navbar() {
             <p className="navbar-date">May 10, 2026 • Reno, NV</p>
             <p className="navbar-date-countdown">{daysUntilWedding} days to go!</p>
         </div>
+        <div className="navbar-links">
+          <ul>
+            <li>
+              <a href="/home" className='active'>Home</a>
+            </li>
+            <li>
+              <a href="/story">Our Story</a>
+            </li>
+            <li>
+              <a href="/photos">Photos</a>
+            </li>
+            <li>
+              <a href="/event">Event Info</a>
+            </li>
+            <li>
+              <a href="/rsvp">RSVP</a>
+            </li>
+          </ul>
+        </div>
     </nav>
   )
 }

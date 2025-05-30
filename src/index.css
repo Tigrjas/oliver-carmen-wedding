@@ -20,6 +20,30 @@
   align-items: center;
 }
 
+
+.navbar-links ul{
+  list-style-type: none;
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar li .active {
+  background-color: #555;
+}
+
+.navbar li:hover {
+  background-color: #777;
+}
+
+
 .footer {
   background-color: #302D31;
   color: white;
