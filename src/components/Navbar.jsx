@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, useMatch, useResolvedPath } from 'react-router';
 
 export default function Navbar() {
   const WEDDING_DATE = new Date('2026-5-10');
@@ -15,11 +16,11 @@ export default function Navbar() {
         </div>
         <div className="navbar-links">
           <ul>
-            <CustomLink href="/">Home</CustomLink>
-            <CustomLink href="/story">Story</CustomLink>
-            <CustomLink href="/photos">Photos</CustomLink>
-            <CustomLink href="/event">Event Info</CustomLink>
-            <CustomLink href="/rsvp">RSVP</CustomLink>
+            <CustomLink to="/">Home</CustomLink>
+            <CustomLink to="/story">Story</CustomLink>
+            <CustomLink to="/photos">Photos</CustomLink>
+            <CustomLink to="/event">Event Info</CustomLink>
+            <CustomLink to="/rsvp">RSVP</CustomLink>
           </ul>
         </div>
     </nav>
@@ -32,12 +33,13 @@ function daysBetween(date1, date2) {
   return Math.abs(daysDiff);
 }
 
-function CustomLink({ href, children, ...props }) {
-  const path = window.location.pathname;
-  console.log(path)
+function CustomLink({ to, children, ...props }) {
+  const resolvedPath = useResolvedPath(to);
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true })
+
   return (
-    <li className={path === href ? "active": ""}>
-      <a href={href} {...props}>{children}</a>
+    <li className={isActive ? "active": ""}>
+      <Link to={to} {...props}>{children}</Link>
     </li>
   )
 
